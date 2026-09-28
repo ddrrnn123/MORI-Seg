@@ -1,0 +1,82 @@
+{
+  "_meta": {
+    "default_category_space": "core4",
+    "description": "Category-space definitions shared by inference, postprocess and evaluation"
+  },
+  "spaces": {
+    "train_6": {
+      "aliases": [
+        "source_6"
+      ],
+      "categories": [
+        "cap",
+        "dt",
+        "pt",
+        "ptc",
+        "tuft",
+        "ves"
+      ],
+      "category_remap": {
+        "cap": "cap",
+        "dt": "dt",
+        "pt": "pt",
+        "ptc": "ptc",
+        "tuft": "tuft",
+        "ves": "ves"
+      },
+      "magnification_allowed": {
+        "all": [
+          "cap",
+          "dt",
+          "pt",
+          "ptc",
+          "tuft",
+          "ves"
+        ]
+      },
+      "drop_categories": []
+    },
+    "core4": {
+      "aliases": [
+        "test_core4"
+      ],
+      "categories": [
+        "arteries_arterioles",
+        "non-globally-sclerotic_glomeruli",
+        "peritubular-capillaries",
+        "tubules"
+      ],
+      "category_remap": {
+        "arteries_arterioles": "arteries_arterioles",
+        "non-globally-sclerotic_glomeruli": "non-globally-sclerotic_glomeruli",
+        "peritubular-capillaries": "peritubular-capillaries",
+        "tubules": "tubules",
+        "cap": "non-globally-sclerotic_glomeruli",
+        "pt": "tubules",
+        "ptc": "peritubular-capillaries",
+        "ves": "arteries_arterioles",
+        "dt": "tubules",
+        "tuft": null
+      },
+      "magnification_allowed": {
+        "10x": [
+          "arteries_arterioles",
+          "non-globally-sclerotic_glomeruli",
+          "tubules"
+        ],
+        "40x": [
+          "peritubular-capillaries"
+        ],
+        "unknown": [
+          "arteries_arterioles",
+          "non-globally-sclerotic_glomeruli",
+          "peritubular-capillaries",
+          "tubules"
+        ]
+      },
+      "drop_categories": [
+        "tuft"
+      ]
+    }
+  }
+}
